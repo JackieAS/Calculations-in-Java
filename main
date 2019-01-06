@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class test{
+    
+  public static void main(String[] args){
+      
+      Scanner scan = new Scanner (System.in);
+      
+      System.out.println("Hello!");
+      System.out.println("Please enter an int.");
+      int num1 = scan.nextInt();
+      System.out.println("The number you entered was: " +num1);
+      
+      System.out.println("Please enter another int.");
+      int num2 = scan.nextInt();
+      System.out.println("The second number you entered was: " +num2);
+      
+      System.out.println("What would you like to do?");
+      System.out.println("a. add");
+      System.out.println("b. subtract");
+      System.out.println("c. multiply");
+      System.out.println("d. divide");
+      System.out.println("please enter a, b, c, or d.");
+      String choice = scan.next(); 
+      
+      if (num1 != 0 && num2 != 0){
+          if (choice.equals("a"))
+          {
+              System.out.println(num1+num2);
+          }
+          
+          else if (choice.equals("b"))
+          {
+              System.out.println(num1-num2);
+          }
+          
+          else if (choice.equals("c"))
+          {
+              System.out.println(num1*num2);
+          }
+          
+          else if (choice.equals("d"))
+          {
+              System.out.println(num1/num2);
+          }
+      }
+      
+      else{
+          System.out.println("There was an error");
+      }   
+      scan.close();
+  }
+}
